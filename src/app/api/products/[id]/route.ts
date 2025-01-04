@@ -20,7 +20,7 @@ const products = [
     description: "Description for Product 2",
   },
   {
-    id:"3",
+    id: "3",
     name: "Jacket",
     price: 89,
     category: "Clothing",
@@ -110,19 +110,19 @@ const products = [
   },
 ];
 
-
 export async function GET(
-    req: Request,
-    { params }: { params: { id?: string } }
-  ) {
-    if (params.id) {
-      const product = products.find((p) => p.id === params.id);
-  
-      if (product) {
-        return NextResponse.json(product);
-      } else {
-        return NextResponse.json({ error: "Product not found" }, { status: 404 });
-      }
+  req: Request,
+  { params }: { params: { id?: string } }
+) {
+  if (params.id !== "0") {
+    const product = products.find((p) => p.id === params.id);
+
+    if (product) {
+      return NextResponse.json(product);
+    } else {
+      return NextResponse.json({ error: "Product not found" }, { status: 404 });
     }
+  } else {
     return NextResponse.json(products);
   }
+}

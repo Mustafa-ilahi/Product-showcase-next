@@ -52,8 +52,8 @@ const ProductPage = async ({ params }: ProductPageProps) => {
       <div className="max-w-4xl w-full p-6 bg-white rounded-lg shadow-lg">
         <div className="mb-6">
           <Link href={"/"}>
-            <button className="px-6 py-2 bg-gray-600 text-white font-semibold rounded-lg hover:bg-gray-700">
-              Back to Home
+          <button className="px-6 py-2 bg-gray-600 text-white font-semibold rounded-lg hover:bg-indigo-600 hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+          Back to Home
             </button>
           </Link>
         </div>
@@ -73,7 +73,7 @@ const ProductPage = async ({ params }: ProductPageProps) => {
               {product.name}
             </h1>
             <p className="text-lg text-gray-600 mt-2">{product.category}</p>
-            <p className="text-2xl font-bold text-gray-900 mt-4">
+            <p className="text-2xl font-bold text-indigo-600 mt-4">
               ${product.price}
             </p>
             <p className="text-base text-gray-700 mt-6">
